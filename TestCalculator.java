@@ -10,4 +10,12 @@ public class TestCalculator {
         
     }
     
+    public void add (double addend) { value += addend; }
+    
+    public void subtract (double subtrahend) { value -= subtrahend; }
+    
+    public void multiply (double multiplier) { value *= multiplier; }
+    
+    public void divide (double divisor) { value /= divisor; }
+    
 }
