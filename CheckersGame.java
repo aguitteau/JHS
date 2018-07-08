@@ -3,7 +3,7 @@ public class CheckersGame {
     private char[][][] board;
     
     public CheckersGame () {
-        board = new char[10][10][2];
+        board = new char[8][8][2];
         initializeBoard();
     }
     
@@ -21,6 +21,10 @@ public class CheckersGame {
             
             squareColor = !squareColor;
         }
+    }
+    
+    public void initializePieces () {
+        
     }
     
     public void displayBoard () {
