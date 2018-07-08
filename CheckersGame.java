@@ -8,8 +8,6 @@ public class CheckersGame {
     }
     
     public void initializeBoard () {
-        boolean squareColor = true;
-        
         for (int r = 0; r < board.length; r++) {
             for (int c = 0; c < board[r].length; c++) {
                 
@@ -18,11 +16,7 @@ public class CheckersGame {
                 } else {
                     board[r][c][0] = '.';
                 }
-                
-                
             }
-            
-            squareColor = !squareColor;
         }
     }
     
