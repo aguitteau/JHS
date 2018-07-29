@@ -1,4 +1,6 @@
 
+import java.util.Scanner;
+
 public class CheckersGame {
     private char[][][] board;
     
@@ -30,6 +32,25 @@ public class CheckersGame {
             }
         }
     }
+ 
+    public void move (char player, int startX, int startY, int endX, int endY) {
+    	while (board[startX][startY][1] != player) {
+    		Scanner invalidEntry = new Scanner(System.in);
+    		System.out.println("ERROR: move() method: the starting coordinates you have selected contain either an opponent's piece or don't contain any piece at all.");
+    		System.out.print("-enter a new set of starting coordinates | format: x y | range (both): 1-8: ");
+    		startX = invalidEntry.nextInt();
+    		startY = invalidEntry.nextInt();
+    		while (startX < 1 || startX > 8 || endY < 1 || endY > 8) {
+    			System.out.println("ERROR: move() method: the new starting coordinates you have selected fall outside the valid range of 1-8.");
+    			System.out.print("-enter a new set of starting coordinates | format: x y | range (both): 1-8: ");
+    			startX = invalidEntry.nextInt();
+        		startY = invalidEntry.nextInt();
+    		}
+    		invalidEntry.close();
+    	}
+    }
+    
+    
     
     public void displayBoard () {
         for (int r = 0; r < board.length; r++) {
