@@ -44,9 +44,4 @@ public class CheckersGame {
             System.out.println();
         }
     }
-    
-    public static void main (String[] args) {
-        CheckersGame checkersGame1 = new CheckersGame();
-        checkersGame1.displayBoard();
-    }
 }
